@@ -1,11 +1,6 @@
-FROM mongo:latest
+FROM lifeafternormal/ubuntu-fresh
 MAINTAINER Mitch Ferrer <mitch@lifeafternormal.net>
 
-# Update package lists
-RUN apt-get update
+ADD put-member.sh put-member.sh
 
-# Upgrading all installed packages
-RUN apt-get upgrade
-
-# Install curl
-RUN apt-get install -y curl
+ENTRYPOINT put-member.sh
