@@ -1,2 +1,2 @@
-FROM lifeafternormal/ubuntu-fresh
+FROM mongo:latest
 MAINTAINER Mitch Ferrer <mitch@lifeafternormal.net>
