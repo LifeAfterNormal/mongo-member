@@ -1,0 +1,12 @@
+sudo: required  
+services:  
+  - docker
+install:  
+  - docker login --email=$DOCKER_EMAIL --username=$DOCKER_USER --password=$DOCKER_PASS
+
+script:  
+  - docker build -t $DOCKER_IMAGE_NAME ./container/
+  - if [ ! -z "$TRAVIS_TAG" ]; then docker tag $DOCKER_IMAGE_NAME:latest $DOCKER_IMAGE_NAME:$TRAVIS_TAG; fi && docker push $DOCKER_IMAGE_NAME
+
+env:  
+  - DOCKER_IMAGE_NAME=lifeafternormal/mongo-member
