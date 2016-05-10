@@ -1,9 +1,9 @@
 # Starting Mongo
-$MONGO=$(docker run -d mongo \
+MONGO=$(docker run -d mongo \
 )
 
 # Form output
-$OUTPUT="{
+OUTPUT="{
 	\"containerId\":\"${MONGO}\",
 }"
 
