@@ -1,6 +1,6 @@
 FROM lifeafternormal/ubuntu-fresh
 MAINTAINER Mitch Ferrer <mitch@lifeafternormal.net>
 
-COPY ./put_member.sh /put_member.sh
+COPY put_member.sh /scripts/
 
-ENTRYPOINT ["/put_member.sh"]
+ENTRYPOINT ["/scripts/put_member.sh"]
