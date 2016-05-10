@@ -1,3 +1,6 @@
 set -e
 
-echo "Test that the mongo runs"
+echo "Create the mongo"
+MONGO_MEMBER=$(docker run $DOCKER_IMAGE_NAME)
+
+echo $MONGO_MEMBER | grep containerId
